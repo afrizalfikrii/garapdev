@@ -1,0 +1,76 @@
+---
+import siteData from '../data/site.json';
+
+const { whatsappUrl } = siteData.site;
+const { eyebrow, heading, tiers } = siteData.pricing;
+---
+
+<section class="w-full py-16 lg:py-24 border-b-2 border-on-surface bg-surface-container-low" id="harga">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="font-label-md text-label-md text-secondary uppercase tracking-wider">{eyebrow}</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">{heading}</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      {
+        tiers.map((tier) => {
+          const message = `Halo Garap.dev, saya tertarik dengan paket ${tier.name} (${tier.price}). Bisa konsultasi?`;
+          const waHref = `${whatsappUrl}?text=${encodeURIComponent(message)}`;
+
+          return (
+            <div
+              class={`relative ${
+                tier.featured
+                  ? 'bg-primary-container shadow-[8px_8px_0_#111111]'
+                  : 'bg-surface-container-lowest shadow-[6px_6px_0_#111111]'
+              } border-2 border-on-surface p-8 flex flex-col justify-between`}
+            >
+              {tier.badge && (
+                <div class="absolute -top-4 right-6 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-3 py-1 border-2 border-on-surface shadow-[3px_3px_0_#111111] rotate-3">
+                  {tier.badge}
+                </div>
+              )}
+              <div>
+                <span
+                  class={`font-label-md text-label-md ${
+                    tier.featured ? 'text-on-surface' : 'text-on-surface-variant'
+                  }`}
+                >
+                  {tier.name}
+                </span>
+                <div class="font-label-lg text-headline-md text-on-surface mt-2 mb-4 font-mono">{tier.price}</div>
+                <p
+                  class={`font-body-sm text-body-sm mb-6 ${
+                    tier.featured ? 'text-on-surface' : 'text-on-surface-variant'
+                  }`}
+                >
+                  {tier.desc}
+                </p>
+                <ul class="space-y-3 font-body-sm text-body-sm text-on-surface mb-8">
+                  {tier.features.map((feat) => (
+                    <li class="flex items-center gap-2">
+                      <span class="material-symbols-outlined text-[18px]">check_box</span> {feat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <a
+                class={`w-full text-center py-3 font-label-lg text-label-lg border-2 border-on-surface shadow-[4px_4px_0_#111111] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_#111111] transition-all ${
+                  tier.featured
+                    ? 'bg-inverse-surface text-primary-container'
+                    : 'bg-surface-container-lowest text-on-surface'
+                }`}
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {tier.cta}
+              </a>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

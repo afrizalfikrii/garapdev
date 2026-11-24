@@ -1,0 +1,22 @@
+---
+import siteData from '../data/site.json';
+
+const { whatsappUrl } = siteData.site;
+const { heading, desc, buttonLabel } = siteData.cta;
+---
+
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-20 lg:py-28" id="cta-wa">
+  <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center gap-8">
+    <h2 class="font-display-xl text-display-xl text-primary-container">{heading}</h2>
+    <p class="font-body-lg text-body-lg text-surface-dim max-w-xl">{desc}</p>
+    <a
+      class="inline-flex items-center gap-3 px-8 py-4 bg-primary-container text-on-surface font-label-lg text-label-lg border-2 border-on-surface shadow-[6px_6px_0_#fcf9f8] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_#fcf9f8] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0_#fcf9f8] transition-all"
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="material-symbols-outlined text-[22px]">chat</span>
+      <span>{buttonLabel}</span>
+    </a>
+  </div>
+</section>

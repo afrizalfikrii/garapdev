@@ -1,0 +1,49 @@
+---
+import siteData from '../data/site.json';
+
+const { eyebrow, heading, items } = siteData.notes;
+---
+
+<section class="w-full py-16 lg:py-24 border-b-2 border-on-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="mb-12">
+      <span class="font-label-md text-label-md text-secondary uppercase tracking-wider">{eyebrow}</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">{heading}</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        items.map((n) => (
+          <article
+            class={`${
+              n.dark
+                ? 'bg-inverse-surface text-inverse-on-surface shadow-[6px_6px_0_#ffc700]'
+                : 'bg-surface-container-lowest shadow-[6px_6px_0_#111111]'
+            } border-2 border-on-surface p-6 flex flex-col justify-between gap-4`}
+          >
+            <div
+              class={`font-label-sm text-label-sm pb-2 ${
+                n.dark
+                  ? 'text-primary-container border-b border-surface-dim/30'
+                  : 'text-on-surface-variant border-b-2 border-on-surface'
+              }`}
+            >
+              {n.path}
+            </div>
+            <div>
+              <h3
+                class={`font-headline-sm text-headline-sm mb-2 ${
+                  n.dark ? 'text-inverse-on-surface' : 'text-on-surface'
+                }`}
+              >
+                {n.title}
+              </h3>
+              <p class={`font-body-sm text-body-sm ${n.dark ? 'text-surface-dim' : 'text-on-surface-variant'}`}>
+                {n.desc}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

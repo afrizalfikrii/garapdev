@@ -1,0 +1,304 @@
+{
+  "site": {
+    "brandName": "Garap.dev",
+    "title": "Garap.dev — Partner Ngoding Santai Tapi Serius",
+    "description": "Partner ngoding santai tapi serius buat bikin website, sistem kasir, IoT, sampai bimbingan tugas akhir tanpa ribet bahasa korporat.",
+    "whatsappUrl": "https://wa.me/6281328922214",
+    "copyright": "© 2026 Garap.dev"
+  },
+  "navbar": {
+    "ctaLabel": "Chat WhatsApp",
+    "links": [
+      {
+        "href": "#layanan",
+        "label": "Layanan"
+      },
+      {
+        "href": "#portofolio",
+        "label": "Portofolio"
+      },
+      {
+        "href": "#harga",
+        "label": "Harga"
+      },
+      {
+        "href": "#faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "hero": {
+    "badge": "Buka slot bulan ini!",
+    "titleBefore": "Ide kamu, kami",
+    "titleHighlight": "garap",
+    "titleAfter": "sampai jadi.",
+    "subtitle": "Partner ngoding santai tapi serius buat bikin website, sistem kasir, IoT, sampai bimbingan tugas akhir tanpa ribet bahasa korporat.",
+    "primaryCta": "Konsultasi Gratis",
+    "secondaryCta": "Lihat Karya",
+    "terminal": {
+      "host": "garap@dev:~/proyek-kamu",
+      "command": "$ npm run build-ide",
+      "logs": [
+        "> Meracik arsitektur & UI/UX...",
+        "> Menulis kode bersih & responsif...",
+        "> Testing di semua device: OK!"
+      ],
+      "typingText": "git commit -m 'beres'"
+    }
+  },
+  "marquee": [
+    "React",
+    "Laravel",
+    "Python",
+    "ESP32",
+    "Docker",
+    "Tailwind"
+  ],
+  "services": {
+    "eyebrow": "Layanan Kami",
+    "heading": "Apa aja yang bisa digarap?",
+    "subheading": "Dari landing page UMKM sampai alat IoT yang nyambung ke dashboard real-time.",
+    "items": [
+      {
+        "num": "01",
+        "tag": "WEB_DEV",
+        "title": "Pembuatan Website",
+        "desc": "Company profile, toko online, sistem kasir, atau web app custom. Desain modern, ngebut dibuka di HP, dan gampang dikelola sendiri.",
+        "variant": "wide-light"
+      },
+      {
+        "num": "02",
+        "tag": "AI_ML",
+        "title": "Machine Learning",
+        "desc": "Klasifikasi gambar, prediksi data penjualan, atau chatbot NLP pakai Python & TensorFlow.",
+        "variant": "narrow-muted"
+      },
+      {
+        "num": "03",
+        "tag": "HARDWARE",
+        "title": "IoT & Embedded",
+        "desc": "Rakit sensor ESP32/Arduino, kirim data via MQTT/HTTP, dan pantau langsung lewat dashboard web.",
+        "variant": "narrow-muted"
+      },
+      {
+        "num": "04",
+        "tag": "MENTORING",
+        "title": "Bimbingan Proyek Kuliah & Skripsi",
+        "desc": "Bingung mulai dari mana atau stuck di error? Kami bantu bimbing ngoding bareng, jelasin alur sistemnya sampai kamu paham luar dalam buat sidang!",
+        "variant": "wide-accent"
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portofolio",
+    "heading": "Karya yang sudah live.",
+    "ctaLabel": "Lihat detail",
+    "items": [
+      {
+        "domain": "https://jalainrentcar.vercel.app/",
+        "url": "https://jalainrentcar.vercel.app/",
+        "title": "Website Rental Mobil",
+        "desc": "Sistem booking armada Tinggal pilih lokasi & tanggal, total harga langsung keitung otomatis.",
+        "image": "",
+        "alt": "Clean modern car rental website interface mockup showing vehicle fleet cards, booking calendar, and bold yellow call-to-action buttons on a warm cream background, neo-brutalist flat UI style",
+        "tags": [
+          "Laravel",
+          "Tailwind",
+          "MySQL"
+        ]
+      },
+      {
+        "domain": "https://posmartdemo.vercel.app/",
+        "url": "https://posmartdemo.vercel.app/",
+        "title": "Sistem Kasir UMKM",
+        "desc": "POS berbasis web untuk kedai kopi, lengkap dengan cetak struk thermal dan laporan omzet harian.",
+        "image": "",
+        "alt": "Point of sale cafe cashier web application dashboard showing coffee menu grid, order receipt sidebar, and daily revenue chart in high-contrast black, cream, and yellow neo-brutalist UI",
+        "tags": [
+          "React",
+          "Laravel",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "domain": "https://iotkitdashboardums.vercel.app/",
+        "url": "https://iotkitdashboardums.vercel.app/",
+        "title": "Dashboard IoT Praktikum",
+        "desc": " Daashboard Monitoring ESP8266 secara real-time.",
+        "image": "",
+        "alt": "IoT smart farming monitoring dashboard displaying real-time temperature, humidity, and pH sensor gauges in dark terminal style with bright yellow and cyan accents",
+        "tags": [
+          "ESP8266",
+          "Firebase"
+        ]
+      }
+    ]
+  },
+  "workflow": {
+    "eyebrow": "Cara Kerja",
+    "heading": "Alur santai, hasil maksimal.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Konsultasi",
+        "desc": "Ceritain ide atau masalahmu lewat chat WhatsApp.",
+        "highlight": false
+      },
+      {
+        "num": "02",
+        "title": "Deal",
+        "desc": "Sepakati fitur, estimasi waktu, dan DP ringan.",
+        "highlight": false
+      },
+      {
+        "num": "03",
+        "title": "Pengerjaan",
+        "desc": "Kami ngoding & kirim update progres rutin.",
+        "highlight": false
+      },
+      {
+        "num": "04",
+        "title": "Revisi",
+        "desc": "Cek bareng-bareng, poles bagian yang kurang pas.",
+        "highlight": false
+      },
+      {
+        "num": "05",
+        "title": "Serah Terima",
+        "desc": "Source code, panduan pakai, dan garansi bug.",
+        "highlight": true
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Harga Transparan",
+    "heading": "Pilih paket sesuai kebutuhan.",
+    "tiers": [
+      {
+        "name": "BASIC",
+        "price": "Rp 750rb",
+        "desc": "Cocok buat landing page UMKM atau portofolio personal yang cepat jadi.",
+        "features": [
+          "1 Halaman Responsif",
+          "Integrasi Tombol WhatsApp",
+          "Gratis Revisi 2x"
+        ],
+        "cta": "Pilih Basic",
+        "featured": false
+      },
+      {
+        "name": "STANDAR",
+        "price": "Mulai dari Rp 1jt",
+        "desc": "Pas buat web bisnis multi-halaman, sistem kasir, atau dashboard admin.",
+        "features": [
+          "Multi-Halaman & Database",
+          "Dashboard Admin Custom",
+          "Gratis Setup Hosting/Domain",
+          "Garansi Maintenance 1 Bulan"
+        ],
+        "cta": "Pilih Standar",
+        "featured": true,
+        "badge": "Paling laris"
+      },
+      {
+        "name": "PREMIUM",
+        "price": "Mulai dari Rp 2jt",
+        "desc": "Buat sistem kompleks, integrasi IoT, Machine Learning, atau SaaS MVP.",
+        "features": [
+          "Arsitektur Full-Stack Custom",
+          "Integrasi API / Hardware IoT",
+          "Dokumentasi & Video Panduan"
+        ],
+        "cta": "Diskusi Custom",
+        "featured": false
+      }
+    ]
+  },
+  "notes": {
+    "eyebrow": "Catatan Singkat",
+    "heading": "Biar makin paham dunia tech.",
+    "items": [
+      {
+        "path": "~/docs/custom-vs-template.md",
+        "title": "Beli Source Code Jadi vs Bikin Custom?",
+        "desc": "Beli template jadi emang murah, tapi pas mau nambah fitur kasir atau laporan cabang suka mentok. Bikin custom itu ibarat beli baju pas badan: nggak kedodoran dan siap ekspansi.",
+        "dark": true
+      },
+      {
+        "path": "~/docs/hosting-vs-cloud.md",
+        "title": "Hosting Murahan vs Cloud Server?",
+        "desc": "Website sering down pas promo bukan karena kutukan, tapi servernya nggak kuat nampung traffic. Kita pilihkan hosting yang pas budget tanpa bikin pelanggan kabur.",
+        "dark": false
+      },
+      {
+        "path": "~/docs/umkm-web.md",
+        "title": "Kenapa Website UMKM Penting?",
+        "desc": "Biar usaha kamu gampang dicari di Google, terlihat lebih terpercaya dibanding cuma numpang di sosmed, dan buka 24 jam nonstop.",
+        "dark": false
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Kata Mereka",
+    "heading": "Chat asli dari klien.",
+    "items": [
+      {
+        "author": "Mas Raka — Owner Rental",
+        "time": "14:22 ✓✓",
+        "quote": "\"Mantap mas, web rentalnya udah dipake pelanggan. Adminnya juga gampang banget dipelajari sama staf saya.\"",
+        "variant": "light-left"
+      },
+      {
+        "author": "Sinta — Mahasiswa TI",
+        "time": "19:05 ✓✓",
+        "quote": "\"Makasih banyak bimbingannya kak! Akhirnya paham cara kerja ESP32 ke dashboard, sidang kemarin lancar jaya!\"",
+        "variant": "accent-right"
+      },
+      {
+        "author": "Kopi Senja — Cafe",
+        "time": "21:10 ✓✓",
+        "quote": "\"Sistem kasirnya ringan banget, nggak pernah nge-lag pas jam rame. Rekap harian tinggal klik langsung beres.\"",
+        "variant": "light-left"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Yang sering ditanyain.",
+    "items": [
+      {
+        "q": "Berapa lama proses pengerjaannya?",
+        "a": "Untuk landing page standar biasanya 3–5 hari kerja. Kalau sistem custom atau IoT sekitar 1–3 minggu tergantung tingkat kerumitan fitur."
+      },
+      {
+        "q": "Apakah bisa bayar bertahap (DP)?",
+        "a": "Bisa banget! Cukup DP 30%–50% di awal buat tanda jadi, sisanya dilunasi setelah proyek selesai dan kamu puas sama hasilnya."
+      },
+      {
+        "q": "Kalau ada error setelah serah terima gimana?",
+        "a": "Tenang, semua proyek dapat garansi perbaikan bug gratis selama 1 bulan penuh. Tinggal chat aja kalau ada kendala."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Yuk, mulai proyekmu.",
+    "desc": "Nggak perlu nunggu ide sempurna. Ngobrol dulu aja gratis lewat WhatsApp, kita cari solusi paling pas buat budget dan kebutuhanmu.",
+    "buttonLabel": "Chat WhatsApp Sekarang"
+  },
+  "footer": {
+    "socials": [
+      {
+        "label": "TikTok",
+        "href": "https://www.tiktok.com/@garap.dev"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/afrizalfikrii"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/6281328922214"
+      }
+    ]
+  }
+}

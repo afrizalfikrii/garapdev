@@ -1,0 +1,21 @@
+---
+import siteData from '../data/site.json';
+
+const stacks = siteData.marquee;
+const repeated = [...stacks, ...stacks, ...stacks, ...stacks];
+---
+
+<section class="w-full bg-primary-container border-b-2 border-on-surface py-3.5 overflow-hidden">
+  <div class="flex whitespace-nowrap items-center gap-8 font-label-lg text-label-lg text-on-surface">
+    <div class="flex items-center gap-8 animate-marquee">
+      {
+        repeated.map((item) => (
+          <>
+            <span>{item}</span>
+            <span>•</span>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>

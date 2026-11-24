@@ -1,0 +1,86 @@
+---
+import siteData from '../data/site.json';
+
+const { brandName, whatsappUrl } = siteData.site;
+const { ctaLabel, links } = siteData.navbar;
+---
+
+<header class="fixed top-0 w-full z-50 bg-surface border-b-2 border-on-surface">
+  <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md">
+    <a
+      class="inline-flex items-center px-3 py-1 bg-inverse-surface text-primary-container border-2 border-on-surface shadow-[3px_3px_0_#111111] font-headline-sm text-headline-sm tracking-tight"
+      href="#"
+    >
+      {brandName}
+    </a>
+    <nav class="hidden md:flex items-center gap-space-lg">
+      {
+        links.map((item) => (
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+            href={item.href}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="flex items-center gap-3">
+      <a
+        class="inline-flex items-center px-3 sm:px-4 py-2 bg-primary-container text-on-primary-container font-label-lg text-label-lg border-2 border-on-surface shadow-[4px_4px_0_#111111] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_#111111] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0_#111111] transition-all"
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {ctaLabel}
+      </a>
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        aria-label="Buka menu navigasi"
+        aria-expanded="false"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 bg-surface-container-lowest text-on-surface border-2 border-on-surface shadow-[3px_3px_0_#111111]"
+      >
+        <span class="material-symbols-outlined text-[22px]" id="mobile-menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-surface border-t-2 border-on-surface px-6 py-4 space-y-2"
+  >
+    {
+      links.map((item) => (
+        <a
+          class="mobile-nav-link block py-2 px-3 font-label-lg text-label-lg text-on-surface hover:bg-primary-container border-2 border-transparent hover:border-on-surface transition-colors"
+          href={item.href}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('mobile-menu-icon');
+
+  toggleBtn?.addEventListener('click', () => {
+    if (!mobileMenu || !menuIcon) return;
+    const isHidden = mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.textContent = isHidden ? 'close' : 'menu';
+    toggleBtn.setAttribute('aria-expanded', String(isHidden));
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      if (menuIcon) menuIcon.textContent = 'menu';
+      toggleBtn?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

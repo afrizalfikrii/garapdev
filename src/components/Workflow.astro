@@ -1,0 +1,36 @@
+---
+import siteData from '../data/site.json';
+
+const { eyebrow, heading, steps } = siteData.workflow;
+---
+
+<section class="w-full py-16 lg:py-24 border-b-2 border-on-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="mb-12">
+      <span class="font-label-md text-label-md text-secondary uppercase tracking-wider">{eyebrow}</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">{heading}</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      {
+        steps.map((step) => (
+          <div
+            class={`${
+              step.highlight ? 'bg-primary-container' : 'bg-surface-container-lowest'
+            } border-2 border-on-surface p-5 shadow-[4px_4px_0_#111111]`}
+          >
+            <span
+              class="font-display-xl text-display-xl text-surface-container-lowest block mb-3"
+              style="-webkit-text-stroke: 2px #1c1b1b;"
+            >
+              {step.num}
+            </span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">{step.title}</h3>
+            <p class={`font-body-sm text-body-sm ${step.highlight ? 'text-on-surface' : 'text-on-surface-variant'}`}>
+              {step.desc}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

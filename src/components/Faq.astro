@@ -1,0 +1,47 @@
+---
+import siteData from '../data/site.json';
+
+const { eyebrow, heading, items } = siteData.faq;
+---
+
+<section class="w-full py-16 lg:py-24 border-b-2 border-on-surface" id="faq">
+  <div class="max-w-4xl mx-auto px-6 lg:px-12">
+    <div class="mb-10">
+      <span class="font-label-md text-label-md text-secondary uppercase tracking-wider">{eyebrow}</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">{heading}</h2>
+    </div>
+    <div class="space-y-4" id="faq-list">
+      {
+        items.map((item) => (
+          <div class="bg-surface-container-lowest border-2 border-on-surface shadow-[4px_4px_0_#111111]">
+            <button
+              class="faq-toggle w-full flex items-center justify-between p-5 text-left font-headline-sm text-headline-sm text-on-surface"
+              type="button"
+            >
+              <span>{item.q}</span>
+              <span class="faq-icon font-label-lg text-label-lg bg-primary-container px-2.5 py-0.5 border-2 border-on-surface">
+                +
+              </span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t-2 border-on-surface pt-4">
+              {item.a}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      if (!content || !icon) return;
+      const isHidden = content.classList.contains('hidden');
+      content.classList.toggle('hidden');
+      icon.textContent = isHidden ? '-' : '+';
+    });
+  });
+</script>

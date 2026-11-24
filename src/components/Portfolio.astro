@@ -1,0 +1,71 @@
+---
+import siteData from '../data/site.json';
+
+const { eyebrow, heading, ctaLabel, items } = siteData.portfolio;
+
+function getPreviewImage(image: string, url: string) {
+  if (image) return image;
+  if (url) return `https://s0.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=800`;
+  return '';
+}
+---
+
+<section class="w-full py-16 lg:py-24 border-b-2 border-on-surface bg-surface-container-low" id="portofolio">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="mb-12">
+      <span class="font-label-md text-label-md text-secondary uppercase tracking-wider">{eyebrow}</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">{heading}</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        items.map((p) => {
+          const hasExternalUrl = Boolean(p.url);
+          const href = hasExternalUrl ? p.url : '#cta-wa';
+          const imgSrc = getPreviewImage(p.image, p.url);
+
+          return (
+            <article class="bg-surface-container-lowest border-2 border-on-surface shadow-[6px_6px_0_#111111] flex flex-col">
+              <div class="flex items-center gap-2 px-3 py-2 border-b-2 border-on-surface bg-surface-container">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary-container border border-on-surface" />
+                <span class="w-2.5 h-2.5 rounded-full bg-primary-container border border-on-surface" />
+                <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container border border-on-surface" />
+                <span class="font-label-sm text-label-sm text-on-surface-variant ml-2 truncate">{p.domain}</span>
+              </div>
+              <a
+                class="h-48 border-b-2 border-on-surface overflow-hidden block"
+                href={href}
+                target={hasExternalUrl ? '_blank' : undefined}
+                rel={hasExternalUrl ? 'noopener noreferrer' : undefined}
+              >
+                <img class="w-full h-full object-cover" src={imgSrc} alt={p.alt} loading="lazy" />
+              </a>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">{p.title}</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mb-4">{p.desc}</p>
+                  <div class="flex flex-wrap gap-2">
+                    {p.tags.map((tag) => (
+                      <span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 border border-on-surface">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <a
+                  class="inline-flex items-center gap-1.5 font-label-md text-label-md text-on-surface hover:text-primary transition-colors pt-2"
+                  href={href}
+                  target={hasExternalUrl ? '_blank' : undefined}
+                  rel={hasExternalUrl ? 'noopener noreferrer' : undefined}
+                >
+                  <span>{ctaLabel}</span>
+                  <span class="material-symbols-outlined text-[16px]">north_east</span>
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
