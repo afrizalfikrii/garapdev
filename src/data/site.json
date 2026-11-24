@@ -98,7 +98,7 @@
         "domain": "https://jalainrentcar.vercel.app/",
         "url": "https://jalainrentcar.vercel.app/",
         "title": "Website Rental Mobil",
-        "desc": "Sistem booking armada Tinggal pilih lokasi & tanggal, total harga langsung keitung otomatis.",
+        "desc": "Sistem booking armada. Tinggal pilih lokasi & tanggal, total harga langsung keitung otomatis.",
         "image": "",
         "alt": "Clean modern car rental website interface mockup showing vehicle fleet cards, booking calendar, and bold yellow call-to-action buttons on a warm cream background, neo-brutalist flat UI style",
         "tags": [
@@ -111,7 +111,7 @@
         "domain": "https://posmartdemo.vercel.app/",
         "url": "https://posmartdemo.vercel.app/",
         "title": "Sistem Kasir UMKM",
-        "desc": "POS berbasis web untuk kedai kopi, lengkap dengan cetak struk thermal dan laporan omzet harian.",
+        "desc": "POS berbasis web untuk UMKM, lengkap dengan cetak struk thermal dan laporan omzet harian.",
         "image": "",
         "alt": "Point of sale cafe cashier web application dashboard showing coffee menu grid, order receipt sidebar, and daily revenue chart in high-contrast black, cream, and yellow neo-brutalist UI",
         "tags": [
@@ -124,12 +124,24 @@
         "domain": "https://iotkitdashboardums.vercel.app/",
         "url": "https://iotkitdashboardums.vercel.app/",
         "title": "Dashboard IoT Praktikum",
-        "desc": " Daashboard Monitoring ESP8266 secara real-time.",
+        "desc": " Dashboard Monitoring ESP8266 secara real-time.",
         "image": "",
-        "alt": "IoT smart farming monitoring dashboard displaying real-time temperature, humidity, and pH sensor gauges in dark terminal style with bright yellow and cyan accents",
+        "alt": "IoT dashboard menampilkan data monitoring real-time dengan grafik dan status sensor dalam desain minimalis modern",
         "tags": [
           "ESP8266",
           "Firebase"
+        ]
+      },
+      {
+        "domain": "https://bayarkuu.vercel.app/warungberkahjaya",
+        "url": "https://bayarkuu.vercel.app/warungberkahjaya",
+        "title": "Web Daftar Pembayaran (Bayarku",
+        "desc": "Capek kirim nomor rekening satu-satu di chat? Bayarku merangkum semua cara bayar (bank, e-wallet, QRIS) dalam satu link. Pembeli pilih sendiri, tekan Salin, beres.",
+        "image": "",
+        "alt": "Halaman Bayarku berisi daftar metode pembayaran bank, e-wallet, dan QRIS dengan tombol salin nomor rekening dan unduh QRIS",
+        "tags": [
+          "Tailwind CSS",
+          "Next.js"
         ]
       }
     ]
